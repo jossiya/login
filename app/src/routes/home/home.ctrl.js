@@ -1,6 +1,6 @@
 "use script"
 
-const User = require("../../model/User");
+const User = require("../../models/User");
 
 const output ={
     home : (req, res)=>{
@@ -9,6 +9,9 @@ const output ={
     
      login : (req, res)=>{
         res.render("home/login");
+    },
+    register :(req, res)=>{
+        res.render("home/register");
     },
 };
 
@@ -19,9 +22,9 @@ const output ={
        const response =user.login();
        return res.json(response);
 
-    },
+    }
 }
-module.exports ={
+module.exports = {
    output,
    process,
 };
