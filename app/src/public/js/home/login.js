@@ -1,22 +1,33 @@
 "use script"
 
-const { post } = require("../../../routes/home");
 
 const id= document.querySelector("#id"),
-    pw= document.querySelector("#pw"),
-    loginBth = document.querySelector("#btn") ;
+    psword= document.querySelector("#psword"),
+    loginBth = document.querySelector("button") ;
 
 loginBth.addEventListener("click",login)
 function login(){
-const req={
+    const req={
     id : id.value,
-    pw : pw.value
+    psword :psword.value,
     };
-    fetch("/login",{
-        method:"post",
+    
+    fetch("/login", {
+        method:"POST",
         headers :{
-            "Content-Type" : "application/json"
+            "Content-Type" : "application/json",
         },
-        body :JSON.stringify(req)
+        body : JSON.stringify(req),
     })
+    .then((res)=>res.json())
+    .then((res)=>{
+        if(res.success){
+            location.href="/";
+        }else{
+            alert(res.msg);
+        }  
+    })
+    .catch((err)=>{
+    console.error(new Error("로그인 중 에러발생"));
+    });
 }
