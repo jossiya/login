@@ -1,9 +1,9 @@
-"use script"
+"use sctrct"
 
 
 const id= document.querySelector("#id"),
     psword= document.querySelector("#psword"),
-    loginBth = document.querySelector("button") ;
+    loginBth = document.querySelector("#btn") ;
 
 loginBth.addEventListener("click",login)
 function login(){
@@ -22,7 +22,7 @@ function login(){
     .then((res)=>res.json())
     .then((res)=>{
         if(res.success){
-            location.href="/";
+            location.href="/main";
         }else{
             alert(res.msg);
         }  
