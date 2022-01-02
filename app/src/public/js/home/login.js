@@ -1,6 +1,7 @@
 "use sctrct"
 
 
+//로그인 기능
 const id= document.querySelector("#id"),
     psword= document.querySelector("#psword"),
     loginBth = document.querySelector("#btn") ;

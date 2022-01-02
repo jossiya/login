@@ -24,6 +24,7 @@ body {
   /* height: 36px; */
   background-color: var(--backgroud-color);
   padding: 20px 12px;
+  transition: all 3s;
   /* margin: 0; */
 }
 .navbar__logo {
@@ -54,7 +55,7 @@ body {
 .navbar__icons li {
   padding: 8px 12px;
 }
-.navbar__toogleBtn {
+.navbar__toggleBtn {
   display: none;
   position: absolute;
   right: 32px;
@@ -66,7 +67,7 @@ body {
     flex-direction: column;
     align-items: flex-start;
     padding: 8px 24px;
-    height: ;
+    transition: all 2s;
   }
   .navbar__menu {
     display: none;
@@ -74,6 +75,7 @@ body {
     align-items: center;
     /* background: black; */
     width: 100%;
+    transition: all 0.5ms;
   }
   .navbar__menu li {
     width: 100%;
@@ -84,7 +86,7 @@ body {
     justify-content: center;
     width: 100%;
   }
-  .navbar__toogleBtn {
+  .navbar__toggleBtn {
     display: block;
   }
   .navbar__menu.active,
